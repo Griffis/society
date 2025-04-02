@@ -1,7 +1,7 @@
 import React from 'react';
 import {getStateBackup, deepForceUpdateByBackup} from './utils';
 
-let backup = null;
+const backup = null;
 
 export default class KeepAlive extends React.Component {
   componentDidMount() {
