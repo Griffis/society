@@ -10,6 +10,6 @@ export interface IIdentificationContextProps {
   extra: any;
 }
 
-const WithKeepAliveContext = React.createContext<IIdentificationContextProps>({} as any);
+let WithKeepAliveContext = React.createContext<IIdentificationContextProps>({} as any);
 
 export default WithKeepAliveContext;
