@@ -3,12 +3,12 @@ import {useKeepAliveEffect} from '../../../es';
 import B from './B';
 
 function Test() {
-  const [index, setIndex] = useState(0);
-  const divRef = useRef();
+  let [index, setIndex] = useState(0);
+  let divRef = useRef();
   useKeepAliveEffect(() => {
     console.log('activated', index);
     console.log(divRef.current.offsetWidth);
-    const i = 0;
+    let i = 0;
 
     return () => {
       console.log('unactivated', index, i);
