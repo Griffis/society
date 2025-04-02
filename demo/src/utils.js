@@ -1,7 +1,7 @@
 export function getStateBackup(instance) {
-  const root = instance;
+  var root = instance;
   let node = root
-  const backupRoot = {};
+  var backupRoot = {};
   let backupNode = backupRoot;
   while (true) {
     if (node.stateNode !== null && typeof node.type === 'function') {
@@ -37,15 +37,15 @@ export function getStateBackup(instance) {
   }
 }
 
-const excludes = ['props', 'state', 'context', 'refs', 'updater', '_reactInternalFiber', '_reactInternalInstance'];
+var excludes = ['props', 'state', 'context', 'refs', 'updater', '_reactInternalFiber', '_reactInternalInstance'];
 
 export function deepForceUpdateByBackup(instance, backup) {
-  const root = instance._reactInternalFiber || instance._reactInternalInstance
+  var root = instance._reactInternalFiber || instance._reactInternalInstance
   let node = root
   while (true) {
     if (node.stateNode !== null && typeof node.type === 'function') {
-      const publicInstance = node.stateNode
-      const { updater } = publicInstance
+      var publicInstance = node.stateNode
+      var { updater } = publicInstance
       // TODO:
       // 无法修改箭头函数的 this 指向
       Object.keys(backup.instance).forEach(key => {
