@@ -1,6 +1,6 @@
-const hexDigits = '0123456789abcdef';
+var hexDigits = '0123456789abcdef';
 
-export const prefix = 'keep-alive';
+export var prefix = 'keep-alive';
 
 /**
  * Create UUID
@@ -9,7 +9,7 @@ export const prefix = 'keep-alive';
  * @returns
  */
 export default function createUniqueIdentification(length = 6) {
-  const strings = [];
+  var strings = [];
   for (let i = 0; i < length; i++) {
     strings[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
   }
